@@ -1,0 +1,61 @@
+/* Estilos para laptop/torre */
+@media (min-width: 1025px) {
+    /* Tus estilos aquí */
+    body{
+        background-image: url(../IMAGENES/fondoWEBdifuminado1920.png);
+        background-size: cover; /* Escala la imagen para cubrir todo el fondo */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-position: center; /* Centra la imagen en el fondo */
+        background-attachment: fixed; /* Fija la imagen en el fondo */
+        display: grid;
+        min-height: 100dvh;
+        grid-template-rows: auto 1fr auto;
+        margin: 0;
+        
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #5786C3;
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
+    
+   
+  }
+  
+  /* Estilos para tablet */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    /* Tus estilos aquí */
+    body{
+        background-image: url(../IMAGENES/fondoWEBdifuminado1920.png);
+        background-size: cover; /* Escala la imagen para cubrir todo el fondo */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-position: center; /* Centra la imagen en el fondo */
+        background-attachment: fixed; /* Fija la imagen en el fondo */
+        display: grid;
+        min-height: 100dvh;
+        grid-template-rows: auto 1fr auto;
+        margin: 0;
+
+    }
+}
+  /* Estilos para móvil */
+  @media (max-width: 767px) {
+    /* Tus estilos aquí */
+    body{
+        background-image: url(../IMAGENES/fondoWEBdifuminado1920.png);
+        background-size: cover; /* Escala la imagen para cubrir todo el fondo */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-position: center; /* Centra la imagen en el fondo */
+        background-attachment: fixed; /* Fija la imagen en el fondo */
+        display: grid;
+        min-height: 100dvh;
+        grid-template-rows: auto 1fr auto;
+        margin: 0;
+
+    }
+  }
