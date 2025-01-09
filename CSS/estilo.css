@@ -1,28 +1,91 @@
+body{
+  background-image: url(../IMAGENES/fondoWEBdifuminado1920.png);
+  background-size: cover; /* Escala la imagen para cubrir todo el fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen en el fondo */
+  background-attachment: fixed; /* Fija la imagen en el fondo */
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+  margin: 0;
+  
+}
+
+header{
+  display: flex;
+  align-items: center;
+  background-color: #5786C3;
+  width: 100%;
+  border-radius: 0.3em;
+  opacity: 0.9;
+  gap: 1.8em;
+  
+}
+
+#logonav {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  max-width: 100%; /* Asegura que el logo no exceda el ancho del contenedor */
+  height: auto; /* Mantiene la proporción del logo */
+  width: 9.375em; /* Ajusta el tamaño inicial del logo */
+}
+
+#navegador{
+  height: auto;
+  margin-left: 10%;
+
+}
+
+#navegador ul {
+justify-content: center;
+list-style: none;
+display: inline-flex;
+}
+
+#navegador ul li {
+margin: 0 0.625em;
+}
+
+#navegador a {
+text-decoration: none;
+color: white;
+font-family: 'Roboto', sans-serif;
+font-size: 130%;
+position: relative;
+transition: color 0.5s ease;
+padding: 0.3em
+}
+
+#navegador a:hover {
+color: #F46B20;
+}
+
+#navegador a.active {
+  background-color: #F46B20;
+  border-radius: 0.2em;
+}
+
+#navegador a.active:hover {
+  color: white;
+}
+
+
+
+
+
+/*RESPONSIVE*/
 /* Estilos para laptop/torre */
 @media (min-width: 1025px) {
     /* Tus estilos aquí */
-    body{
-        background-image: url(../IMAGENES/fondoWEBdifuminado1920.png);
-        background-size: cover; /* Escala la imagen para cubrir todo el fondo */
-        background-repeat: no-repeat; /* Evita que la imagen se repita */
-        background-position: center; /* Centra la imagen en el fondo */
-        background-attachment: fixed; /* Fija la imagen en el fondo */
-        display: grid;
-        min-height: 100dvh;
-        grid-template-rows: auto 1fr auto;
-        margin: 0;
-        
-    }
+    
 
-    header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #5786C3;
-        position: fixed;
-        width: 100%;
-        z-index: 100;
-    }
+    
+    
+    
+    
     
    
   }
@@ -30,32 +93,12 @@
   /* Estilos para tablet */
   @media (min-width: 768px) and (max-width: 1024px) {
     /* Tus estilos aquí */
-    body{
-        background-image: url(../IMAGENES/fondoWEBdifuminado1920.png);
-        background-size: cover; /* Escala la imagen para cubrir todo el fondo */
-        background-repeat: no-repeat; /* Evita que la imagen se repita */
-        background-position: center; /* Centra la imagen en el fondo */
-        background-attachment: fixed; /* Fija la imagen en el fondo */
-        display: grid;
-        min-height: 100dvh;
-        grid-template-rows: auto 1fr auto;
-        margin: 0;
+   
 
-    }
+   
 }
   /* Estilos para móvil */
   @media (max-width: 767px) {
     /* Tus estilos aquí */
-    body{
-        background-image: url(../IMAGENES/fondoWEBdifuminado1920.png);
-        background-size: cover; /* Escala la imagen para cubrir todo el fondo */
-        background-repeat: no-repeat; /* Evita que la imagen se repita */
-        background-position: center; /* Centra la imagen en el fondo */
-        background-attachment: fixed; /* Fija la imagen en el fondo */
-        display: grid;
-        min-height: 100dvh;
-        grid-template-rows: auto 1fr auto;
-        margin: 0;
-
-    }
+    
   }
