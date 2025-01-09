@@ -4,20 +4,22 @@ body{
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen en el fondo */
   background-attachment: fixed; /* Fija la imagen en el fondo */
-  display: grid;
-  min-height: 100dvh;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
+
+
   
 }
-
+/*INICIO ENCABEZADO*/
 header{
   display: flex;
   align-items: center;
   background-color: #5786C3;
   width: 100%;
   border-radius: 0.3em;
-  opacity: 0.9;
+  opacity: 0.8;
   gap: 1.8em;
   
 }
@@ -25,6 +27,7 @@ header{
 #logonav {
   display: flex;
   align-items: center;
+  margin-left: 2%;
 }
 
 #logo {
@@ -35,7 +38,7 @@ header{
 
 #navegador{
   height: auto;
-  margin-left: 10%;
+  margin-left: 18%;
 
 }
 
@@ -71,7 +74,89 @@ color: #F46B20;
 #navegador a.active:hover {
   color: white;
 }
+/*FIN ENCABEZADO*/
 
+
+main {
+  flex: 1; /* Hace que el main ocupe el espacio disponible */
+}
+
+
+
+/*INICIO DE FOOTER*/
+footer{
+  
+  display: flex;
+  opacity: 0.8;
+  align-items: center; /* Centra los elementos horizontalmente */
+  background-color: #13427E;
+  width: 100%;
+  border-radius: 0.3em;
+  gap: 0.5em;
+  
+}
+
+#logof{
+  display: flex;
+  align-items: center;
+  
+}
+
+#logof img{
+  max-width: 100%;
+  height: auto; /* Mantiene la proporción del logo */
+  width: 9.375em; /* Ajusta el tamaño inicial del logo */
+}
+
+#con1{
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.8em;
+}
+#con2{
+  display: flex;
+  flex-direction: column; /* Apila los elementos verticalmente */
+  align-items: center;
+  padding-left: 5%;
+
+}
+
+#contact{
+  order: 1; /* Asegura que #contact esté por encima de #icon */
+ margin-top: 0.8em;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+#contact a{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+#icon{
+  order: 2; /* Asegura que #icon esté debajo de #contact */
+  
+}
+
+#icon a{
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+#icon a:hover{
+  color: white;
+}
+
+#icon i{
+  font-size: 2em;
+  margin: 0.5em;
+}
+
+/*FIN FOOTER*/
 
 
 
