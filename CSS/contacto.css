@@ -1,17 +1,27 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-image: url(../IMAGENES/fondoWEBdifuminado1920.png);
+    background-size: cover; /* Escala la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-attachment: fixed; /* Fija la imagen en el fondo */
 }
 
 h1 {
+    background: #fff;
     text-align: center;
     margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
 }
 
 form {
@@ -44,7 +54,7 @@ textarea {
 }
 
 button {
-    background: #5cb85c;
+    background:  #13427E;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -54,7 +64,7 @@ button {
 }
 
 button:hover {
-    background: #4cae4c;
+    background:#5786C3;
 }
 
 .success-message {
