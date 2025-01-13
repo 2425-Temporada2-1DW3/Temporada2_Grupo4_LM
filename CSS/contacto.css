@@ -13,7 +13,7 @@ body {
     background-attachment: fixed; /* Fija la imagen en el fondo */
 }
 
-h1 {
+.contacto h1 {
     background: #fff;
     text-align: center;
     margin-bottom: 20px;
@@ -24,7 +24,7 @@ h1 {
     max-width: 400px;
 }
 
-form {
+.contacto form {
     background: #fff;
     padding: 20px;
     border-radius: 5px;
@@ -33,13 +33,13 @@ form {
     max-width: 400px;
 }
 
-label {
+.contacto label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-input, textarea {
+.contacto input, .contacto textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -48,12 +48,12 @@ input, textarea {
     box-sizing: border-box;
 }
 
-textarea {
+.contacto textarea {
     resize: vertical;
     height: 100px;
 }
 
-button {
+.contacto button {
     background:  #13427E;
     color: #fff;
     border: none;
@@ -63,7 +63,7 @@ button {
     width: 100%;
 }
 
-button:hover {
+.contacto button:hover {
     background:#5786C3;
 }
 

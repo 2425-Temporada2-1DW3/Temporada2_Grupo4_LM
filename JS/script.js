@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
     const enlaces = document.querySelectorAll("nav a");
     const contenido = document.getElementById("contenido");
     const navLinks = document.querySelectorAll('nav ul li a');
@@ -44,4 +46,18 @@ document.addEventListener("DOMContentLoaded", () => {
     cargarPagina("inicio");
     contenido.setAttribute('data-page', 'inicio'); // Establece la página por defecto
     updateActiveLink(); // Llama a la función para actualizar el enlace activo
+
+    // FORMULARIO DE CONTACTO
+    const form = document.getElementById('contacto-form');
+
+    // Agregamos el evento submit
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevenimos el comportamiento por defecto del formulario
+
+        // Mostramos la alerta
+        alert('¡Hemos recibido tu mensaje! Recibirás una respuesta a la mayor brevedad posible.');
+
+        // Limpiamos los campos del formulario
+        form.reset();
+    });
 });
