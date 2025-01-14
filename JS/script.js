@@ -17,10 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function cargarPagina(pagina) {
         const xhr = new XMLHttpRequest();
-        xhr.open("GET", `PAGINAS/${pagina}.html`, true);
+        xhr.open("GET", `${pagina}.html`, true);
         xhr.onload = () => {
             if (xhr.status === 200) {
                 contenido.innerHTML = xhr.responseText;
+                if (pagina === "equipos" || pagina === "clasificacion") {
+                    cargarXSL(pagina); // Cargar y aplicar XSL después de cargar el HTML
+                }
             } else {
                 contenido.innerHTML = "<h1>Error al cargar la página</h1>";
             }
@@ -29,6 +32,39 @@ document.addEventListener("DOMContentLoaded", () => {
             contenido.innerHTML = "<h1>Error en la solicitud AJAX</h1>";
         };
         xhr.send();
+    }
+
+    function cargarXSL(pagina) {
+        const xslFile = `XML/${pagina}.xsl`;
+        const xmlFile = "XML/temporadas.xml";
+
+        const xsltProcessor = new XSLTProcessor();
+        const outputDiv = document.getElementById("contenido");
+
+        // Cargar el archivo XSL
+        fetch(xslFile)
+            .then(response => response.text())
+            .then(xslText => {
+                const parser = new DOMParser();
+                const xslDoc = parser.parseFromString(xslText, "application/xml");
+                xsltProcessor.importStylesheet(xslDoc);
+
+                // Cargar el archivo XML y transformar
+                return fetch(xmlFile);
+            })
+            .then(response => response.text())
+            .then(xmlText => {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlText, "application/xml");
+                const resultDocument = xsltProcessor.transformToFragment(xmlDoc, document);
+
+                // Reemplazar el contenido actual con el resultado transformado
+                outputDiv.innerHTML = "";
+                outputDiv.appendChild(resultDocument);
+            })
+            .catch(error => {
+                console.error("Error cargando XSL/XML:", error);
+            });
     }
 
     function updateActiveLink() {
@@ -48,16 +84,18 @@ document.addEventListener("DOMContentLoaded", () => {
     updateActiveLink(); // Llama a la función para actualizar el enlace activo
 
     // FORMULARIO DE CONTACTO
-    const form = document.getElementById('contacto-form');
+        if (document.body.classList.contains('contacto')) {
+        const form = document.getElementById('contacto-form');
 
-    // Agregamos el evento submit
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevenimos el comportamiento por defecto del formulario
+        // Agregamos el evento submit
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenimos el comportamiento por defecto del formulario
 
-        // Mostramos la alerta
-        alert('¡Hemos recibido tu mensaje! Recibirás una respuesta a la mayor brevedad posible.');
+            // Mostramos la alerta
+            alert('¡Hemos recibido tu mensaje! Recibirás una respuesta a la mayor brevedad posible.');
 
-        // Limpiamos los campos del formulario
-        form.reset();
-    });
+            // Limpiamos los campos del formulario
+            form.reset();
+        });
+    }
 });
