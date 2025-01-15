@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('year').textContent = new Date().getFullYear();
-    
+
     const enlaces = document.querySelectorAll("nav a");
     const contenido = document.getElementById("contenido");
     const navLinks = document.querySelectorAll('nav ul li a');
+
+    let temporadaSeleccionada = 'Activa';
 
     enlaces.forEach(enlace => {
         enlace.addEventListener("click", (e) => {
@@ -37,10 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
     function cargarXSL(pagina) {
         const xslFile = `XML/${pagina}.xsl`;
         const xmlFile = "XML/temporadas.xml";
-
+        
         const xsltProcessor = new XSLTProcessor();
         const outputDiv = document.getElementById("contenido");
-
+        
         // Cargar el archivo XSL
         fetch(xslFile)
             .then(response => response.text())
@@ -48,23 +50,59 @@ document.addEventListener("DOMContentLoaded", () => {
                 const parser = new DOMParser();
                 const xslDoc = parser.parseFromString(xslText, "application/xml");
                 xsltProcessor.importStylesheet(xslDoc);
-
-                // Cargar el archivo XML y transformar
-                return fetch(xmlFile);
+        
+                if (pagina === "equipos" || pagina === "clasificacion") {
+                    return fetch(xmlFile)
+                        .then(response => response.text())
+                        .then(xmlText => {
+                            const parser = new DOMParser();
+                            const xmlDoc = parser.parseFromString(xmlText, "application/xml");
+    
+                            if (temporadaSeleccionada === 'Activa') {
+                                const xpathResult = xmlDoc.evaluate(
+                                    "//temporada[estado='Activa']/nombre", 
+                                    xmlDoc, 
+                                    null, 
+                                    XPathResult.FIRST_ORDERED_NODE_TYPE, 
+                                    null
+                                );
+                                const activaTemporada = xpathResult.singleNodeValue;
+                                if (activaTemporada) {
+                                    temporadaSeleccionada = activaTemporada.textContent;
+                                }
+                            }
+    
+                            xsltProcessor.setParameter(null, "temporadaSeleccionada", temporadaSeleccionada);
+        
+                            return xmlDoc;
+                        });
+                }
             })
-            .then(response => response.text())
-            .then(xmlText => {
-                const parser = new DOMParser();
-                const xmlDoc = parser.parseFromString(xmlText, "application/xml");
+            .then(xmlDoc => {
                 const resultDocument = xsltProcessor.transformToFragment(xmlDoc, document);
-
-                // Reemplazar el contenido actual con el resultado transformado
+        
                 outputDiv.innerHTML = "";
                 outputDiv.appendChild(resultDocument);
+        
+                configurarCambioTemporada(pagina);
+                agregarEventosEquipos();  // Añadir los eventos de clic para los equipos
             })
             .catch(error => {
                 console.error("Error cargando XSL/XML:", error);
             });
+    }
+
+    function configurarCambioTemporada(pagina) {
+        const temporadaSelect = document.getElementById("temporadaSelect");
+        if (temporadaSelect) {
+            temporadaSelect.value = temporadaSeleccionada;
+    
+            temporadaSelect.addEventListener("change", (e) => {
+                const nuevaTemporada = e.target.value;
+                temporadaSeleccionada = nuevaTemporada;
+                cargarXSL(pagina);
+            });
+        }
     }
 
     function updateActiveLink() {
@@ -78,13 +116,34 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    function mostrarDetallesEquipo(nombreEquipo) {
+        document.getElementById('equipos').style.display = 'none';
+        document.querySelector('.temporada-header').style.display = 'none';
+    
+        const detallesEquipo = document.getElementById('detalle-' + nombreEquipo);
+        if (detallesEquipo) {
+            detallesEquipo.style.display = 'block';
+        }
+    }
+
+    function agregarEventosEquipos() {
+        // Asignar eventos de clic a los equipos
+        const equipos = document.querySelectorAll('.equipo');
+        equipos.forEach(equipo => {
+            equipo.addEventListener('click', () => {
+                const nombreEquipo = equipo.querySelector('strong').textContent;
+                mostrarDetallesEquipo(nombreEquipo);
+            });
+        });
+    }
+
     // Cargar la página por defecto
     cargarPagina("inicio");
     contenido.setAttribute('data-page', 'inicio'); // Establece la página por defecto
     updateActiveLink(); // Llama a la función para actualizar el enlace activo
 
     // FORMULARIO DE CONTACTO
-        if (document.body.classList.contains('contacto')) {
+    if (document.body.classList.contains('contacto')) {
         const form = document.getElementById('contacto-form');
 
         // Agregamos el evento submit

@@ -4,14 +4,6 @@
 	<temporada>
 		<nombre>2023-2024</nombre>
 		<estado>Finalizada</estado>
-		<equipos>
-			<equipo>
-			</equipo>
-		</equipos>
-		<jornadas>
-			<jornada>
-			</jornada>
-		</jornadas>
 	</temporada>
 	<temporada>
 		<nombre>2024-2025</nombre>
@@ -740,13 +732,5 @@
 	<temporada>
 		<nombre>2025-2026</nombre>
 		<estado>En proceso</estado>
-		<equipos>
-			<equipo>
-			</equipo>
-		</equipos>
-		<jornadas>
-			<jornada>
-			</jornada>
-		</jornadas>
 	</temporada>
 </temporadas>
