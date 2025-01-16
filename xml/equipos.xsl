@@ -30,7 +30,7 @@
                 <xsl:choose>
                     <xsl:when test="count(temporadas/temporada[nombre = $temporadaSeleccionada]/equipos/equipo) > 0">
                         <xsl:for-each select="temporadas/temporada[nombre = $temporadaSeleccionada]/equipos/equipo">
-                            <div class="equipo" tabindex="0" onclick="mostrarDetallesEquipo('{nombre}')">
+                            <div class="equipo" tabindex="0">
                                 <img class="logo" src="img/temporadas/{$temporadaSeleccionada}/{nombre}/{nombre}.png" alt="Logo del equipo" />
                                 <strong><xsl:value-of select="nombre" /></strong>
                             </div>
@@ -45,7 +45,6 @@
             <!-- Detalles de los equipos -->
             <xsl:for-each select="temporadas/temporada[nombre = $temporadaSeleccionada]/equipos/equipo">
                 <div class="detalles-equipo" id="detalle-{nombre}" style="display: none;">
-                    
                     <div class="equipo-header">
                         <div class="equipo-logo">
                             <img src="img/temporadas/{$temporadaSeleccionada}/{nombre}/{nombre}.png" alt="Logo del equipo" />
@@ -58,23 +57,23 @@
                     </div>
 
                     <div class="jugadores">
-                        <h2>Jugadores</h2>
-                        <xsl:for-each select="jugadores/jugador">
-                            <xsl:variable name="rutaImagen" select="concat('img/temporadas/', $temporadaSeleccionada, '/', ../../nombre, '/', nombre, ' ', apellidos, '.png')" />
-                            
-                            <xsl:message select="$rutaImagen" />
+                        <h2>Plantilla</h2>
+                        <div class="jugadores-grid">
+                            <xsl:for-each select="jugadores/jugador">
+                                <xsl:variable name="rutaImagen" select="concat('img/temporadas/', $temporadaSeleccionada, '/', ../../nombre, '/', nombre, ' ', apellidos, '.png')" />
+                                
+                                <xsl:message select="$rutaImagen" />
 
-                            <div class="jugador">
-                                <img class="jugador-foto" 
-                                    src="{$rutaImagen}" 
-                                    alt="{nombre}" />
-                                <div class="jugador-info">
-                                    <p><strong><xsl:value-of select="concat(nombre, ' ', apellidos)" /></strong></p>
-                                    <p><strong>Dorsal: </strong> <xsl:value-of select="dorsal" /></p>
-                                    <p><strong>Posición: </strong> <xsl:value-of select="posicion" /></p>
+                                <div class="jugador">
+                                    <img class="jugador-foto" src="{$rutaImagen}" alt="{nombre}" />
+                                    <div class="jugador-info">
+                                        <p><strong><xsl:value-of select="concat(nombre, ' ', apellidos)" /></strong></p>
+                                        <p>Dorsal: <xsl:value-of select="dorsal" /></p>
+                                        <p>Posición: <xsl:value-of select="posicion" /></p>
+                                    </div>
                                 </div>
-                            </div>
-                        </xsl:for-each>
+                            </xsl:for-each>
+                        </div>
                     </div>
                 </div>
             </xsl:for-each>

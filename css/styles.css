@@ -231,6 +231,97 @@ footer {
 /*FIN FOOTER*/
 
 
+/* INICIO DE CLASIFICACIÓN */
+
+.contenedor-clasificacion {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    color: white;
+    padding: 1.25em;
+}
+
+.contenedor-clasificacion h1 {
+    margin-left: 2em;
+}
+
+.clasificacion-contenido {
+    padding: 2em;
+}
+
+.clasificacion-contenido table {
+    width: 80%;
+    border-collapse: separate;
+    margin-top: 1em;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.clasificacion-contenido th, td {
+    padding: 1em;
+    text-align: center;
+}
+
+.clasificacion-contenido th {
+    background-color: #333;
+    color: white;
+}
+
+.clasificacion-contenido tr:nth-child(even) {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.clasificacion-contenido tr:nth-child(odd) {
+    background-color: #e4e3e3;
+    color: #333;
+}
+
+.clasificacion-contenido tr:nth-child(even):hover {
+    background-color: #ddd;
+}
+
+.clasificacion-contenido tr:nth-child(odd):hover {
+    background-color: #cacaca;
+}
+
+.clasificacion-equipo {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    justify-content: center;
+}
+
+.clasificacion-equipo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.clasificacion-logo {
+    width: 3em;
+    height: 3em;
+    object-fit: cover;
+    margin-right: 1em;
+}
+
+.clasificacion-contenido td[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    font-size: 0.9em;
+    top: 10px;
+    left: 100%;
+    white-space: nowrap;
+}
+
+/* FIN DE CLASIFICACIÓN */
+
+
 /* INICIO DE EQUIPOS */
 
 .contenedor-equipos {
@@ -288,7 +379,7 @@ footer {
 }
 
 .equipo {
-    border: 0.125em solid #333;
+    border: 0.125em solid #5f5f5f;
     border-radius: 0.5em;
     background-color: #fffcefad;
     padding: 0.625em;
@@ -326,37 +417,43 @@ footer {
 
 .detalles-equipo {
     display: none;
-    border: 0.125em solid #333;
+    border: 0.125em solid #5f5f5f;
     border-radius: 0.5em;
     background-color: #fffcefad;
     padding: 2em;
     box-shadow: 0 0.375em 0.75em rgba(0, 0, 0, 0.1);
     margin-top: 2em;
     transition: all 0.3s;
-    color: black;
-}
-
-.detalles-equipo h1 {
-    font-size: 2em;
-    margin-bottom: 1em;
+    color: #5f5f5f;
 }
 
 .equipo-header {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 2em;
     margin-bottom: 2em;
 }
 
+.equipo-header h1 {
+    color: #424242;
+}
+
 .equipo-logo {
-	display: flex;
+    display: flex
+;
+    align-items: center;
 }
 
 .equipo-logo img {
     width: 8em;
     height: 8em;
     object-fit: cover;
-    margin-bottom: 1.5em;
-	margin-right: 2em;
+    margin-right: 2em;
+}
+
+.equipo-info {
+    margin-right: 2em;
 }
 
 .equipo-info p {
@@ -365,44 +462,49 @@ footer {
 }
 
 .equipo-info strong {
-    font-weight: bold;
-}
-
-.jugadores {
-    margin-top: 2em;
+    color: #424242;
 }
 
 .jugadores h2 {
     font-size: 1.5em;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
+    text-align: center;
+    color: #424242;
+}
+
+.jugadores-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .jugador {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    margin-bottom: 1em;
-    color: #333;
+    text-align: center;
+    min-width: 10em;
+    color: #5f5f5f;
 }
 
 .jugador-foto {
-    width: 4em;
-    height: 4em;
+    width: 8em;
+    height: 8em;
     border-radius: 50%;
     object-fit: cover;
+    margin-bottom: 0.5em;
 }
 
 .jugador-info {
-    display: flex;
-    flex-direction: column;
+    font-size: 1.1em;
 }
 
-.jugador p {
-    margin: 0;
+.jugador-info p {
+    margin: 0.2em 0;
 }
 
-.jugador strong {
-    font-size: 1.2em;
+.jugador-info strong {
+    color: #424242;
 }
 
 /* FIN DE EQUIPOS */

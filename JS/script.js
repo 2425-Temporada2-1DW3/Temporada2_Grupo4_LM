@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('year').textContent = new Date().getFullYear();
 
     const enlaces = document.querySelectorAll("nav a");
@@ -86,9 +86,10 @@ document.addEventListener("DOMContentLoaded", () => {
         
                 configurarCambioTemporada(pagina);
                 agregarEventosEquipos();  // Añadir los eventos de clic para los equipos
+                agregarEventosClasificacion();  // Añadir los eventos de clic para la clasificación
             })
             .catch(error => {
-                console.error("Error cargando XSL/XML:", error);
+                console.error("Error al cargar el archivo XSL", error);
             });
     }
 
@@ -127,12 +128,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function agregarEventosEquipos() {
-        // Asignar eventos de clic a los equipos
         const equipos = document.querySelectorAll('.equipo');
         equipos.forEach(equipo => {
             equipo.addEventListener('click', () => {
                 const nombreEquipo = equipo.querySelector('strong').textContent;
                 mostrarDetallesEquipo(nombreEquipo);
+            });
+        });
+    }
+
+    function agregarEventosClasificacion() {
+        const enlacesEquipos = document.querySelectorAll('.enlace-clasificacion');
+        enlacesEquipos.forEach(enlace => {
+            enlace.addEventListener("click", (e) => {
+                e.preventDefault();
+                const pagina = enlace.getAttribute("data-page");
+                cargarPagina(pagina);
+                contenido.setAttribute('data-page', pagina); // Actualiza el atributo data-page
+                updateActiveLink(); // Llama a la función para actualizar el enlace activo
+                const equipo = enlace.getAttribute("data-equipo"); // Obtener el nombre del equipo
+                mostrarDetallesEquipo(equipo);
             });
         });
     }
