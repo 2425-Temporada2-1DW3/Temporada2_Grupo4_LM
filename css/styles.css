@@ -245,6 +245,10 @@ footer {
     margin-left: 2em;
 }
 
+.contenedor-clasificacion p {
+    text-align: center;
+}
+
 .clasificacion-contenido {
     padding: 2em;
 }
@@ -345,6 +349,10 @@ footer {
 
 .temporada-header label {
     font-size: 1.125em;
+}
+
+.temporada-select {
+    text-align: right;
 }
 
 #temporadaSelect, #jornadaSelect {
