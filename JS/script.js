@@ -17,14 +17,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    function cargarPagina(pagina) {
+    function cargarPagina(pagina, equipoSeleccionado = null) {
         const xhr = new XMLHttpRequest();
         xhr.open("GET", `${pagina}.html`, true);
         xhr.onload = () => {
             if (xhr.status === 200) {
                 contenido.innerHTML = xhr.responseText;
                 if (pagina === "equipos" || pagina === "clasificacion") {
-                    cargarXSL(pagina); // Cargar y aplicar XSL después de cargar el HTML
+                    cargarXSL(pagina, equipoSeleccionado); // Cargar y aplicar XSL después de cargar el HTML
+                }
+
+                if (pagina === "contacto") {
+                    agregarEventosContacto();
                 }
             } else {
                 contenido.innerHTML = "<h1>Error al cargar la página</h1>";
@@ -36,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         xhr.send();
     }
 
-    function cargarXSL(pagina) {
+    function cargarXSL(pagina, equipoSeleccionado = null) {
         const xslFile = `XML/${pagina}.xsl`;
         const xmlFile = "XML/temporadas.xml";
         
@@ -87,6 +91,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 configurarCambioTemporada(pagina);
                 agregarEventosEquipos();  // Añadir los eventos de clic para los equipos
                 agregarEventosClasificacion();  // Añadir los eventos de clic para la clasificación
+
+                if (equipoSeleccionado) {
+                    mostrarDetallesEquipo(equipoSeleccionado);
+                }
             })
             .catch(error => {
                 console.error("Error al cargar el archivo XSL", error);
@@ -101,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
             temporadaSelect.addEventListener("change", (e) => {
                 const nuevaTemporada = e.target.value;
                 temporadaSeleccionada = nuevaTemporada;
-                cargarXSL(pagina);
+                cargarXSL(pagina, null);
             });
         }
     }
@@ -143,12 +151,22 @@ document.addEventListener('DOMContentLoaded', function() {
             enlace.addEventListener("click", (e) => {
                 e.preventDefault();
                 const pagina = enlace.getAttribute("data-page");
-                cargarPagina(pagina);
+                const equipo = enlace.getAttribute("data-equipo");
+    
+                cargarPagina(pagina, equipo);
+
                 contenido.setAttribute('data-page', pagina); // Actualiza el atributo data-page
                 updateActiveLink(); // Llama a la función para actualizar el enlace activo
-                const equipo = enlace.getAttribute("data-equipo"); // Obtener el nombre del equipo
-                mostrarDetallesEquipo(equipo);
             });
+        });
+    }
+
+    function agregarEventosContacto() {
+        const form = document.getElementById('contacto-form');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevenir envío
+            alert('¡Hemos recibido tu mensaje! Recibirás una respuesta a la mayor brevedad posible.');
+            form.reset(); // Limpiar campos
         });
     }
 
@@ -156,20 +174,4 @@ document.addEventListener('DOMContentLoaded', function() {
     cargarPagina("inicio");
     contenido.setAttribute('data-page', 'inicio'); // Establece la página por defecto
     updateActiveLink(); // Llama a la función para actualizar el enlace activo
-
-    // FORMULARIO DE CONTACTO
-    if (document.body.classList.contains('contacto')) {
-        const form = document.getElementById('contacto-form');
-
-        // Agregamos el evento submit
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevenimos el comportamiento por defecto del formulario
-
-            // Mostramos la alerta
-            alert('¡Hemos recibido tu mensaje! Recibirás una respuesta a la mayor brevedad posible.');
-
-            // Limpiamos los campos del formulario
-            form.reset();
-        });
-    }
 });
