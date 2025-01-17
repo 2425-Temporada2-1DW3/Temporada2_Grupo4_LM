@@ -8,22 +8,44 @@
 	<script src="https://kit.fontawesome.com/ea577ecbca.js" crossorigin="anonymous"></script>
 	<title>LPB - Baloncesto</title>
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/responsive.css">
 	<link rel="shortcut icon" href="img/basketball.png" type="image/x-icon">
 </head>
 
 <body>
 	<header>
-		<div id="logonav"><a href="/"><img id="logo" src="img/logo200x200.png" alt="Logo"></a></div>
-		<nav id="navegador">
-			<ul>
-				<li><a href="inicio.html" data-page="inicio">Inicio</a></li>
-				<li><a href="noticias.html" data-page="noticias">Noticias</a></li>
-				<li><a href="clasificacion.html" data-page="clasificacion">Clasificación</a></li>
-				<li><a href="equipos.html" data-page="equipos">Equipos</a></li>
-				<li><a href="calendario.html" data-page="calendario">Calendario</a></li>
-				<li><a href="contacto.html" data-page="contacto">Contacto</a></li>
-			</ul>
-		</nav>
+		<div class="header-pc">
+			<div id="logonav"><a href="/"><img id="logo" src="img/logo200x200.png" alt="Logo"></a></div>
+			<nav id="navegador">
+				<ul>
+					<li><a href="inicio.html" data-page="inicio">Inicio</a></li>
+					<li><a href="noticias.html" data-page="noticias">Noticias</a></li>
+					<li><a href="clasificacion.html" data-page="clasificacion">Clasificación</a></li>
+					<li><a href="equipos.html" data-page="equipos">Equipos</a></li>
+					<li><a href="calendario.html" data-page="calendario">Calendario</a></li>
+					<li><a href="contacto.html" data-page="contacto">Contacto</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="header-movil">
+			<div id="logonav">
+				<a href="/">
+					<img id="logo" src="img/logo200x200.png" alt="Logo">
+					<img src="img/lpb.png" alt="logo">
+				</a>
+				<i class="fa fa-bars menu-icon" id="menu-icon"></i>
+			</div>
+			<nav id="navegador">
+				<ul>
+					<li><a href="inicio.html" data-page="inicio">Inicio</a></li>
+					<li><a href="noticias.html" data-page="noticias">Noticias</a></li>
+					<li><a href="clasificacion.html" data-page="clasificacion">Clasificación</a></li>
+					<li><a href="equipos.html" data-page="equipos">Equipos</a></li>
+					<li><a href="calendario.html" data-page="calendario">Calendario</a></li>
+					<li><a href="contacto.html" data-page="contacto">Contacto</a></li>
+				</ul>
+			</nav>
+		</div>
 	</header>
 	<main id="contenido">
 		<!-- Aquí se cargará el contenido dinámico -->

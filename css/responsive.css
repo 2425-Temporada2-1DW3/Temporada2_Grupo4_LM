@@ -1,0 +1,110 @@
+/* DISPOSITIVOS MÓVILES */
+@media (max-width: 767px) {
+
+    #logonav {
+        display: flex;
+        font-size: 0.5em;
+        margin: 0;
+    }
+
+    #logonav img {
+        width: 15em;
+    }
+
+    .header-pc {
+        display: none;
+    }
+
+    .header-movil {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #5786C3;
+        width: 100%;
+        opacity: 0.8;
+    }
+
+    #navegador {
+        display: none;
+    }
+
+    #navegador.show {
+        display: flex;
+    }
+
+    #navegador ul {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    #navegador ul li {
+        text-align: center;
+        width: 100%;
+        margin: 1em 0.625em;
+    }
+    
+    .menu-icon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 2em;
+    }
+
+    #intro {
+        padding: 1em;
+    }
+
+    #noticias {
+        flex-direction: column;
+    }
+
+    .noticia {
+        width: 90%;
+    }
+
+}
+
+/* TABLETS */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/* PANTALLAS 720p */
+@media (min-width: 1280px) and (max-width: 1366px) {
+
+}
+
+/* PANTALLAS 1080p */
+@media (min-width: 1920px) and (max-width: 2560px) {
+
+    .temporada-select {
+        font-size: 1.2em;
+    }
+
+    .temporada-jornada {
+        font-size: 1.2em;
+    }
+
+}
+
+/* PANTALLAS 4K */
+@media (min-width: 3840px) {
+
+    body {
+        font-size: 2em;
+    }
+
+    .contacto input, .contacto textarea {
+        padding: 1.5em;
+    }
+
+    .temporada-select {
+        font-size: 1.2em;
+    }
+
+    .temporada-jornada {
+        font-size: 1.2em;
+    }
+
+}

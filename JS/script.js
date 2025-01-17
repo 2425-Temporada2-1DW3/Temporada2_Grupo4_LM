@@ -4,9 +4,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const enlaces = document.querySelectorAll("nav a");
     const contenido = document.getElementById("contenido");
     const navLinks = document.querySelectorAll('nav ul li a');
+    const menuIcon = document.getElementById('menu-icon');
+    const menu = document.querySelector('.header-movil nav');
 
     let temporadaSeleccionada = 'Activa';
     let jornadaSeleccionada = '1';
+
+    menuIcon.addEventListener('click', function() {
+        menu.classList.toggle('show');
+    });
 
     enlaces.forEach(enlace => {
         enlace.addEventListener("click", (e) => {
