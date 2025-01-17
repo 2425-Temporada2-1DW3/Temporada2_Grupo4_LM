@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('nav ul li a');
 
     let temporadaSeleccionada = 'Activa';
+    let jornadaSeleccionada = '1';
 
     enlaces.forEach(enlace => {
         enlace.addEventListener("click", (e) => {
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         xhr.onload = () => {
             if (xhr.status === 200) {
                 contenido.innerHTML = xhr.responseText;
-                if (pagina === "equipos" || pagina === "clasificacion") {
+                if (pagina === "equipos" || pagina === "clasificacion" || pagina === "calendario") {
                     cargarXSL(pagina, equipoSeleccionado); // Cargar y aplicar XSL después de cargar el HTML
                 }
 
@@ -55,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const xslDoc = parser.parseFromString(xslText, "application/xml");
                 xsltProcessor.importStylesheet(xslDoc);
         
-                if (pagina === "equipos" || pagina === "clasificacion") {
+                if (pagina === "equipos" || pagina === "clasificacion" || pagina === "calendario") {
                     return fetch(xmlFile)
                         .then(response => response.text())
                         .then(xmlText => {
@@ -77,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             }
     
                             xsltProcessor.setParameter(null, "temporadaSeleccionada", temporadaSeleccionada);
+                            xsltProcessor.setParameter(null, "jornadaSeleccionada", jornadaSeleccionada);
         
                             return xmlDoc;
                         });
@@ -88,7 +90,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 outputDiv.innerHTML = "";
                 outputDiv.appendChild(resultDocument);
         
-                configurarCambioTemporada(pagina);
+                cambiarTemporada(pagina);
+                cambiarJornada(pagina);
                 agregarEventosEquipos();  // Añadir los eventos de clic para los equipos
                 agregarEventosClasificacion();  // Añadir los eventos de clic para la clasificación
 
@@ -101,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-    function configurarCambioTemporada(pagina) {
+    function cambiarTemporada(pagina) {
         const temporadaSelect = document.getElementById("temporadaSelect");
         if (temporadaSelect) {
             temporadaSelect.value = temporadaSeleccionada;
@@ -109,6 +112,19 @@ document.addEventListener('DOMContentLoaded', function() {
             temporadaSelect.addEventListener("change", (e) => {
                 const nuevaTemporada = e.target.value;
                 temporadaSeleccionada = nuevaTemporada;
+                cargarXSL(pagina, null);
+            });
+        }
+    }
+
+    function cambiarJornada(pagina) {
+        const jornadaSelect = document.getElementById("jornadaSelect");
+        if (jornadaSelect) {
+            jornadaSelect.value = jornadaSeleccionada;
+    
+            jornadaSelect.addEventListener("change", (e) => {
+                const nuevaJornada = e.target.value;
+                jornadaSeleccionada = nuevaJornada;
                 cargarXSL(pagina, null);
             });
         }
