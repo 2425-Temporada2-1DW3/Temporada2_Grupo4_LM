@@ -66,19 +66,21 @@
                             <xsl:value-of select="/temporadas/temporada[nombre = $temporadaSeleccionada]/equipos/equipo[nombre = current()/equipo1]/estadio" />
                         </p>
                     </div>
-                    <a href="equipos.html" data-page="equipos" data-equipo="{equipo1}" class="enlace-clasificacion">
-                        <img src="img/temporadas/{$temporadaSeleccionada}/{equipo1}/{equipo1}.png" alt="{equipo1}" />
+                    <div class="calendario-equipos">
+                        <a href="equipos.html" data-page="equipos" data-equipo="{equipo1}" class="enlace-clasificacion">
+                            <img src="img/temporadas/{$temporadaSeleccionada}/{equipo1}/{equipo1}.png" alt="{equipo1}" />
+                        </a>
+                        <a href="equipos.html" data-page="equipos" data-equipo="{equipo1}" class="enlace-clasificacion">
+                            <p><strong class="partido-equipos"><xsl:value-of select="equipo1" /></strong></p>
+                        </a>
+                        <p><strong class="partido-equipos">Vs.</strong></p>
+                        <a href="equipos.html" data-page="equipos" data-equipo="{equipo2}" class="enlace-clasificacion">
+                            <p><strong class="partido-equipos"><xsl:value-of select="equipo2" /></strong></p>
+                        </a>
+                        <a href="equipos.html" data-page="equipos" data-equipo="{equipo2}" class="enlace-clasificacion">
+                            <img src="img/temporadas/{$temporadaSeleccionada}/{equipo2}/{equipo2}.png" alt="{equipo2}" />
                     </a>
-                    <a href="equipos.html" data-page="equipos" data-equipo="{equipo1}" class="enlace-clasificacion">
-                        <p><strong class="partido-equipos"><xsl:value-of select="equipo1" /></strong></p>
-                    </a>
-                    <p><strong class="partido-equipos">Vs.</strong></p>
-                    <a href="equipos.html" data-page="equipos" data-equipo="{equipo2}" class="enlace-clasificacion">
-                        <p><strong class="partido-equipos"><xsl:value-of select="equipo2" /></strong></p>
-                    </a>
-                    <a href="equipos.html" data-page="equipos" data-equipo="{equipo2}" class="enlace-clasificacion">
-                        <img src="img/temporadas/{$temporadaSeleccionada}/{equipo2}/{equipo2}.png" alt="{equipo2}" />
-                    </a>
+                    </div>
                 </div>
             </xsl:for-each>
         </div>

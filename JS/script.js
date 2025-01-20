@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const contenido = document.getElementById("contenido");
     const navLinks = document.querySelectorAll('nav ul li a');
     const menuIcon = document.getElementById('menu-icon');
+    const headerMovil = document.querySelector('.header-movil');
     const menu = document.querySelector('.header-movil nav');
 
     let temporadaSeleccionada = 'Activa';
@@ -12,6 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     menuIcon.addEventListener('click', function() {
         menu.classList.toggle('show');
+        headerMovil.classList.toggle('open');
+    });
+
+    document.body.addEventListener('click', function (event) {
+        if (!menu.contains(event.target) && event.target !== menuIcon) {
+            menu.classList.remove('show');
+            headerMovil.classList.remove('open');
+        }
     });
 
     enlaces.forEach(enlace => {
@@ -141,6 +150,8 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks.forEach(link => {
             if (link.getAttribute('data-page') === currentPage) {
                 link.classList.add('active');
+                menu.classList.remove('show');
+                headerMovil.classList.remove('open');
             } else {
                 link.classList.remove('active');
             }

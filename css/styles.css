@@ -81,7 +81,7 @@ header {
     text-align: right;
     margin-right: 1em;
     color: white;
-    font-size: 3em;
+    font-size: 2.5em;
     cursor: pointer;
 }
 
@@ -266,11 +266,13 @@ footer {
 }
 
 .clasificacion-contenido {
-    padding: 2em;
+    overflow: auto;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .clasificacion-contenido table {
-    width: 80%;
+    width: 100%;
     border-collapse: separate;
     margin-top: 1em;
     border-radius: 1em;
@@ -521,18 +523,6 @@ footer {
 /* FIN DE EQUIPOS */
 
 
-/* INICIO DE CLASIFICACIÓN */
-
-.clasificacion-contenido {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	color: white;
-}
-
-/* FIN DE CLASIFICACIÓN */
-
-
 /* INICIO DE CALENDARIO */
 
 .contenedor-calendario {
@@ -557,7 +547,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 0.8em;
+    width: 70%;
+    margin: 0 auto;
     padding: 1em 2em;
     border: 0.125em solid #5f5f5f;
     border-radius: 0.5em;
@@ -596,6 +587,13 @@ footer {
 
 .partido-equipos {
     font-size: 1.2em;
+}
+
+.calendario-equipos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
 }
 
 /* FIN DE CALENDARIO */
