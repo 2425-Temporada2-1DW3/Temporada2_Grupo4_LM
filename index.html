@@ -2,48 +2,78 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://kit.fontawesome.com/ea577ecbca.js" crossorigin="anonymous"></script>
-  <title>Mi Liga</title>
-  <link rel="stylesheet" href="CSS/estilo.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://kit.fontawesome.com/ea577ecbca.js" crossorigin="anonymous"></script>
+	<title>LPB - Baloncesto</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="shortcut icon" href="img/basketball.png" type="image/x-icon">
 </head>
 
 <body>
-  <header>
-    <div id="logonav"><img id="logo" src="./IMAGENES/logo200x200.png" alt="Logo"></div>
-    <nav id="navegador">
-      <ul>
-        <li><a href="./PAGINAS/inicio.html" data-page="inicio">Inicio</a></li>
-        <li><a href="./PAGINAS/noticias.html" data-page="noticias">Noticias</a></li>
-        <li><a href="./PAGINAS/clasificacion.html" data-page="clasificacion">Clasificación</a></li>
-        <li><a href="./PAGINAS/equipos.html" data-page="equipos">Equipos</a></li>
-        <li><a href="./PAGINAS/calendario.html" data-page="calendario">Calendario</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main id="contenido">
-    <!-- Aquí se cargará el contenido dinámico -->
-  </main>
-  <script src="JS/paginas.js"></script>
+	<header>
+		<div class="header-pc">
+			<div id="logonav"><a href="/"><img id="logo" src="img/logo200x200.png" alt="Logo"></a></div>
+			<nav id="navegador">
+				<ul>
+					<li><a href="inicio.html" data-page="inicio">Inicio</a></li>
+					<li><a href="noticias.html" data-page="noticias">Noticias</a></li>
+					<li><a href="clasificacion.html" data-page="clasificacion">Clasificación</a></li>
+					<li><a href="equipos.html" data-page="equipos">Equipos</a></li>
+					<li><a href="calendario.html" data-page="calendario">Calendario</a></li>
+					<li><a href="contacto.html" data-page="contacto">Contacto</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="header-movil">
+			<div id="logonav">
+				<a href="/">
+					<img id="logo" src="img/logo200x200.png" alt="Logo">
+					<img src="img/lpb.png" alt="logo">
+				</a>
+				<i class="fa fa-bars menu-icon" id="menu-icon"></i>
+			</div>
+			<nav id="navegador">
+				<ul>
+					<li><a href="inicio.html" data-page="inicio">Inicio</a></li>
+					<li><a href="noticias.html" data-page="noticias">Noticias</a></li>
+					<li><a href="clasificacion.html" data-page="clasificacion">Clasificación</a></li>
+					<li><a href="equipos.html" data-page="equipos">Equipos</a></li>
+					<li><a href="calendario.html" data-page="calendario">Calendario</a></li>
+					<li><a href="contacto.html" data-page="contacto">Contacto</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main id="contenido">
+		<!-- Aquí se cargará el contenido dinámico -->
+	</main>
 
-  <footer>
-    <div id="logof"><img src="./IMAGENES/lpb.png" alt="logo"></div>
-    <div>
-      <p><h5>© 2021 Liga Profesional de Baloncesto</h5></p>
-    </div>
-
-    <div id="con2">
-      <div id="contact"><a href="./PAGINAS/contacto.html" data-page="contacto">Contacto</a></div>
-      <div id="icon">
-        <a href="https://www.instagram.com/"> <i class="fa-brands fa-square-instagram"></i></a>
-        <a href="https://x.com/?lang=es&mx=2"><i class="fa-brands fa-square-x-twitter"></i></a>
-        <a href="https://www.youtube.com/?gl=ES&hl=es&app=desktop"><i class="fa-brands fa-square-youtube"></i></a>
-      </div>
-    </div>
-  </footer>
+	<footer>
+		<div class="footer">
+			<div id="logof"><img src="img/lpb.png" alt="logo"></div>	
+			<div id="con">
+				<p class="footer-title">Redes sociales</p>
+				<a href="https://www.instagram.com/"> <i class="fa-brands fa-instagram"></i></a>
+				<a href="https://x.com/?lang=es&mx=2"><i class="fa-brands fa-x-twitter"></i></a>
+				<a href="https://www.youtube.com/?gl=ES&hl=es&app=desktop"><i class="fa-brands fa-youtube"></i></a>
+			</div>
+			<div id="contacto">
+				<p class="footer-title">CONTACTO</p>
+				<p>Correo electrónico: <a href="mailto:lpb@gmail.com">contacto@lpb.es</a></p>
+				<p>Teléfono: <a href="tel:+34987654321">+34 987 65 43 21</a></p>
+				<p>Dirección: <span>Calle Iradier Pb núm. 37, (08017) Barcelona</span></p>
+			</div>
+		</div>
+		<div class="copyright">
+			<p>&copy; <span id="year"></span> Liga Profesional de Baloncesto</p>
+		</div>
+	</footer>
 
 </body>
+
+<script src="js/script.js"></script>
 
 </html>
