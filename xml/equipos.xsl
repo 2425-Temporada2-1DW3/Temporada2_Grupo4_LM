@@ -31,7 +31,7 @@
                     <xsl:when test="count(temporadas/temporada[nombre = $temporadaSeleccionada]/equipos/equipo) > 0">
                         <xsl:for-each select="temporadas/temporada[nombre = $temporadaSeleccionada]/equipos/equipo">
                             <div class="equipo" tabindex="0">
-                                <img class="logo" src="img/temporadas/{$temporadaSeleccionada}/{nombre}/{nombre}.png" alt="Logo del equipo" />
+                                <img class="logo" src="img/temporadas/Temporada {$temporadaSeleccionada}/{nombre}/{nombre}.png" alt="Logo del equipo" />
                                 <strong><xsl:value-of select="nombre" /></strong>
                             </div>
                         </xsl:for-each>
@@ -47,7 +47,7 @@
                 <div class="detalles-equipo" id="detalle-{nombre}" style="display: none;">
                     <div class="equipo-header">
                         <div class="equipo-logo">
-                            <img src="img/temporadas/{$temporadaSeleccionada}/{nombre}/{nombre}.png" alt="Logo del equipo" />
+                            <img src="img/temporadas/Temporada {$temporadaSeleccionada}/{nombre}/{nombre}.png" alt="Logo del equipo" />
                             <h1><xsl:value-of select="nombre" /></h1>
                         </div>
                         <div class="equipo-info">
@@ -60,7 +60,7 @@
                         <h2>Plantilla</h2>
                         <div class="jugadores-grid">
                             <xsl:for-each select="jugadores/jugador">
-                                <xsl:variable name="rutaImagen" select="concat('img/temporadas/', $temporadaSeleccionada, '/', ../../nombre, '/', nombre, ' ', apellidos, '.png')" />
+                                <xsl:variable name="rutaImagen" select="concat('img/temporadas/Temporada ', $temporadaSeleccionada, '/', ../../nombre, '/', nombre, ' ', apellidos, '.png')" />
                                 
                                 <xsl:message select="$rutaImagen" />
 

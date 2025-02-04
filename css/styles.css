@@ -322,7 +322,6 @@ footer {
 }
 
 .clasificacion-logo {
-    width: 3em;
     height: 3em;
     object-fit: cover;
     margin-right: 1em;
@@ -410,7 +409,6 @@ footer {
 }
 
 .logo {
-    width: 6.25em;
     height: 6.25em;
     margin-bottom: 0.625em;
     object-fit: cover;

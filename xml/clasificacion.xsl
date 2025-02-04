@@ -46,18 +46,18 @@
                                     <td>
                                         <div class="clasificacion-equipo">
                                             <a href="equipos.html" data-page="equipos" data-equipo="{nombre}" class="enlace-clasificacion">
-                                                <img src="img/temporadas/{$temporadaSeleccionada}/{nombre}/{nombre}.png" alt="Logo de {nombre}" class="clasificacion-logo"/>
+                                                <img src="img/temporadas/Temporada {$temporadaSeleccionada}/{nombre}/{nombre}.png" alt="Logo de {nombre}" class="clasificacion-logo"/>
                                                 <xsl:value-of select="nombre"/>
                                             </a>
                                         </div>
                                     </td>
                                     <td><xsl:value-of select="puntos"/></td>
-                                    <td><xsl:value-of select="PartidosJugados"/></td>
-                                    <td><xsl:value-of select="PartidosGanados"/></td>
-                                    <td><xsl:value-of select="PartidosPerdidos"/></td>
-                                    <td><xsl:value-of select="PuntosFavor"/></td>
-                                    <td><xsl:value-of select="PuntosContra"/></td>
-                                    <td><xsl:value-of select="DiferenciaPuntos"/></td>
+                                    <td><xsl:value-of select="partidosJugados"/></td>
+                                    <td><xsl:value-of select="partidosGanados"/></td>
+                                    <td><xsl:value-of select="partidosPerdidos"/></td>
+                                    <td><xsl:value-of select="puntosFavor"/></td>
+                                    <td><xsl:value-of select="puntosContra"/></td>
+                                    <td><xsl:value-of select="diferenciaPuntos"/></td>
                                 </tr>
                             </xsl:for-each>
                         </table>

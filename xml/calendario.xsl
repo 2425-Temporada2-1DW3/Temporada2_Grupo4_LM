@@ -57,10 +57,10 @@
                 <div class="partido">
                     <div class="detalles-partido">
                         <p><strong>Fecha: </strong> 
-                            <xsl:value-of select="concat(substring(fecha, 9, 2), '/', substring(fecha, 6, 2), '/', substring(fecha, 1, 4))" />
+                            <xsl:value-of select="fecha" />
                         </p>
                         <p><strong>Hora: </strong> 
-                            <xsl:value-of select="substring(hora, 1, 5)" />
+                            <xsl:value-of select="hora" />
                         </p>
                         <p><strong>Estadio: </strong>
                             <xsl:value-of select="/temporadas/temporada[nombre = $temporadaSeleccionada]/equipos/equipo[nombre = current()/equipo1]/estadio" />
@@ -68,7 +68,7 @@
                     </div>
                     <div class="calendario-equipos">
                         <a href="equipos.html" data-page="equipos" data-equipo="{equipo1}" class="enlace-clasificacion">
-                            <img src="img/temporadas/{$temporadaSeleccionada}/{equipo1}/{equipo1}.png" alt="{equipo1}" />
+                            <img src="img/temporadas/Temporada {$temporadaSeleccionada}/{equipo1}/{equipo1}.png" alt="{equipo1}" />
                         </a>
                         <a href="equipos.html" data-page="equipos" data-equipo="{equipo1}" class="enlace-clasificacion">
                             <p><strong class="partido-equipos"><xsl:value-of select="equipo1" /></strong></p>
@@ -78,7 +78,7 @@
                             <p><strong class="partido-equipos"><xsl:value-of select="equipo2" /></strong></p>
                         </a>
                         <a href="equipos.html" data-page="equipos" data-equipo="{equipo2}" class="enlace-clasificacion">
-                            <img src="img/temporadas/{$temporadaSeleccionada}/{equipo2}/{equipo2}.png" alt="{equipo2}" />
+                            <img src="img/temporadas/Temporada {$temporadaSeleccionada}/{equipo2}/{equipo2}.png" alt="{equipo2}" />
                     </a>
                     </div>
                 </div>
