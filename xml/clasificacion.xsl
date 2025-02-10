@@ -8,7 +8,7 @@
             <div class="temporada-select">
                 <label for="temporadaSelect">Selecciona la Temporada:</label>
                 <select id="temporadaSelect">
-                    <xsl:for-each select="temporadas/temporada">
+                    <xsl:for-each select="temporadas/temporada[estado != 'En creación']">
                         <option value="{nombre}">
                             <xsl:choose>
                                 <xsl:when test="nombre = $temporadaSeleccionada">

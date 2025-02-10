@@ -13,7 +13,7 @@
                 <div class="temporada-selector">
                     <label for="temporadaSelect">Selecciona una temporada: </label>
                     <select id="temporadaSelect">
-                        <xsl:for-each select="temporadas/temporada">
+                        <xsl:for-each select="temporadas/temporada[estado != 'En creación']">
                             <option value="{nombre}">
                                 <xsl:if test="estado = 'Activa' and not($temporadaSeleccionada)">
                                     <xsl:attribute name="selected">selected</xsl:attribute>

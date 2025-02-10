@@ -11,7 +11,7 @@
                 <div class="temporada-select">
                     <label for="temporadaSelect">Selecciona la Temporada:</label>
                     <select id="temporadaSelect">
-                        <xsl:for-each select="temporadas/temporada">
+                        <xsl:for-each select="temporadas/temporada[estado != 'En creación']">
                             <option value="{nombre}">
                                 <xsl:choose>
                                     <xsl:when test="nombre = $temporadaSeleccionada">
@@ -51,6 +51,7 @@
                             <h1><xsl:value-of select="nombre" /></h1>
                         </div>
                         <div class="equipo-info">
+                            <p><strong>Temporada: </strong> <xsl:value-of select="$temporadaSeleccionada" /></p>
                             <p><strong>Entrenador: </strong> <xsl:value-of select="entrenador" /></p>
                             <p><strong>Estadio: </strong> <xsl:value-of select="estadio" /></p>
                         </div>

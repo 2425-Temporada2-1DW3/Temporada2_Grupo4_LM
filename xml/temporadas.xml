@@ -2,7 +2,7 @@
 <?xml-model href='temporadas.xsd'?>
 <temporadas>
 	<temporada>
-		<nombre>2023-2024</nombre>
+		<nombre>2022-2023</nombre>
 		<estado>Finalizada</estado>
 		<equipos>
 			<equipo>
@@ -786,6 +786,790 @@
 						<equipo1>Valencia Basket</equipo1>
 						<equipo2>FC Barcelona</equipo2>
 						<resultado>80-84</resultado>
+					</partido>
+				</partidos>
+			</jornada>
+		</jornadas>
+	</temporada>
+	<temporada>
+		<nombre>2023-2024</nombre>
+		<estado>Finalizada</estado>
+		<equipos>
+			<equipo>
+				<nombre>Atlanta Hawks</nombre>
+				<entrenador>Quin Snyder</entrenador>
+				<estadio>State Farm Arena</estadio>
+				<puntos>14</puntos>
+				<partidosJugados>10</partidosJugados>
+				<partidosGanados>4</partidosGanados>
+				<partidosPerdidos>6</partidosPerdidos>
+				<puntosFavor>854</puntosFavor>
+				<puntosContra>861</puntosContra>
+				<diferenciaPuntos>-7</diferenciaPuntos>
+				<jugadores>
+					<jugador>
+						<nombre>De'Andre</nombre>
+						<apellidos>Hunter</apellidos>
+						<dorsal>11</dorsal>
+						<posicion>Alero</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Jalen</nombre>
+						<apellidos>Johnson</apellidos>
+						<dorsal>20</dorsal>
+						<posicion>Ala-pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Clint</nombre>
+						<apellidos>Capela</apellidos>
+						<dorsal>15</dorsal>
+						<posicion>Pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Dyson</nombre>
+						<apellidos>Daniels</apellidos>
+						<dorsal>13</dorsal>
+						<posicion>Base</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Trae</nombre>
+						<apellidos>Young</apellidos>
+						<dorsal>3</dorsal>
+						<posicion>Base</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Bogdan</nombre>
+						<apellidos>Bogdanovic</apellidos>
+						<dorsal>12</dorsal>
+						<posicion>Escolta</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Onyeka</nombre>
+						<apellidos>Okongwu</apellidos>
+						<dorsal>8</dorsal>
+						<posicion>Pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Zaccharie</nombre>
+						<apellidos>Risacher</apellidos>
+						<dorsal>22</dorsal>
+						<posicion>Alero</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Vit</nombre>
+						<apellidos>Krejci</apellidos>
+						<dorsal>6</dorsal>
+						<posicion>Escolta</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Mouhamed</nombre>
+						<apellidos>Gueye</apellidos>
+						<dorsal>0</dorsal>
+						<posicion>Ala-pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Garrison</nombre>
+						<apellidos>Mathews</apellidos>
+						<dorsal>17</dorsal>
+						<posicion>Escolta</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Larry</nombre>
+						<apellidos>Nance Jr.</apellidos>
+						<dorsal>10</dorsal>
+						<posicion>Ala-pívot</posicion>
+					</jugador>
+				</jugadores>
+			</equipo>
+			<equipo>
+				<nombre>Boston Celtics</nombre>
+				<entrenador>Joe Mazzulla</entrenador>
+				<estadio>TD Garden</estadio>
+				<puntos>15</puntos>
+				<partidosJugados>10</partidosJugados>
+				<partidosGanados>5</partidosGanados>
+				<partidosPerdidos>5</partidosPerdidos>
+				<puntosFavor>847</puntosFavor>
+				<puntosContra>863</puntosContra>
+				<diferenciaPuntos>-16</diferenciaPuntos>
+				<jugadores>
+					<jugador>
+						<nombre>Jaylen</nombre>
+						<apellidos>Brown</apellidos>
+						<dorsal>7</dorsal>
+						<posicion>Escolta</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Jayson</nombre>
+						<apellidos>Tatum</apellidos>
+						<dorsal>0</dorsal>
+						<posicion>Alero</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Al</nombre>
+						<apellidos>Horford</apellidos>
+						<dorsal>42</dorsal>
+						<posicion>Ala-pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Derrick</nombre>
+						<apellidos>White</apellidos>
+						<dorsal>9</dorsal>
+						<posicion>Escolta</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Jrue</nombre>
+						<apellidos>Holiday</apellidos>
+						<dorsal>4</dorsal>
+						<posicion>Base</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Luke</nombre>
+						<apellidos>Kornet</apellidos>
+						<dorsal>40</dorsal>
+						<posicion>Pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Payton</nombre>
+						<apellidos>Pritchard</apellidos>
+						<dorsal>11</dorsal>
+						<posicion>Base</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Sam</nombre>
+						<apellidos>Hauser</apellidos>
+						<dorsal>30</dorsal>
+						<posicion>Alero</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Xabier</nombre>
+						<apellidos>Tillman</apellidos>
+						<dorsal>26</dorsal>
+						<posicion>Pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Jordan</nombre>
+						<apellidos>Walsh</apellidos>
+						<dorsal>27</dorsal>
+						<posicion>Alero</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Neemias</nombre>
+						<apellidos>Queta</apellidos>
+						<dorsal>88</dorsal>
+						<posicion>Pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Baylor</nombre>
+						<apellidos>Scheierman</apellidos>
+						<dorsal>55</dorsal>
+						<posicion>Alero</posicion>
+					</jugador>
+				</jugadores>
+			</equipo>
+			<equipo>
+				<nombre>Chicago Bulls</nombre>
+				<entrenador>Billy Donovan</entrenador>
+				<estadio>United Center</estadio>
+				<puntos>15</puntos>
+				<partidosJugados>10</partidosJugados>
+				<partidosGanados>5</partidosGanados>
+				<partidosPerdidos>5</partidosPerdidos>
+				<puntosFavor>843</puntosFavor>
+				<puntosContra>824</puntosContra>
+				<diferenciaPuntos>19</diferenciaPuntos>
+				<jugadores>
+					<jugador>
+						<nombre>Zach</nombre>
+						<apellidos>LaVine</apellidos>
+						<dorsal>8</dorsal>
+						<posicion>Escolta</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Patrick</nombre>
+						<apellidos>Williams</apellidos>
+						<dorsal>44</dorsal>
+						<posicion>Ala-pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Nikola</nombre>
+						<apellidos>Vucevic</apellidos>
+						<dorsal>9</dorsal>
+						<posicion>Pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Coby</nombre>
+						<apellidos>White</apellidos>
+						<dorsal>0</dorsal>
+						<posicion>Base</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Josh</nombre>
+						<apellidos>Giddey</apellidos>
+						<dorsal>3</dorsal>
+						<posicion>Base</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Lonzo</nombre>
+						<apellidos>Ball</apellidos>
+						<dorsal>2</dorsal>
+						<posicion>Base</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Ayo</nombre>
+						<apellidos>Dosunmu</apellidos>
+						<dorsal>11</dorsal>
+						<posicion>Base</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Julian</nombre>
+						<apellidos>Phillips</apellidos>
+						<dorsal>15</dorsal>
+						<posicion>Alero</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Jalen</nombre>
+						<apellidos>Smith</apellidos>
+						<dorsal>7</dorsal>
+						<posicion>Ala-pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Talen</nombre>
+						<apellidos>Horton-Tucker</apellidos>
+						<dorsal>22</dorsal>
+						<posicion>Alero</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Matas</nombre>
+						<apellidos>Buzelis</apellidos>
+						<dorsal>14</dorsal>
+						<posicion>Ala-pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Dalen</nombre>
+						<apellidos>Terry</apellidos>
+						<dorsal>25</dorsal>
+						<posicion>Alero</posicion>
+					</jugador>
+				</jugadores>
+			</equipo>
+			<equipo>
+				<nombre>Golden State Warriors</nombre>
+				<entrenador>Steve Kerr</entrenador>
+				<estadio>Chase Center</estadio>
+				<puntos>17</puntos>
+				<partidosJugados>10</partidosJugados>
+				<partidosGanados>7</partidosGanados>
+				<partidosPerdidos>3</partidosPerdidos>
+				<puntosFavor>836</puntosFavor>
+				<puntosContra>815</puntosContra>
+				<diferenciaPuntos>21</diferenciaPuntos>
+				<jugadores>
+					<jugador>
+						<nombre>Jonathan</nombre>
+						<apellidos>Kuminaga</apellidos>
+						<dorsal>0</dorsal>
+						<posicion>Ala-pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Draymond</nombre>
+						<apellidos>Green</apellidos>
+						<dorsal>23</dorsal>
+						<posicion>Ala-pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Trayce</nombre>
+						<apellidos>Jackson-Davis</apellidos>
+						<dorsal>32</dorsal>
+						<posicion>Pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Andrew</nombre>
+						<apellidos>Wiggins</apellidos>
+						<dorsal>22</dorsal>
+						<posicion>Alero</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Stephen</nombre>
+						<apellidos>Curry</apellidos>
+						<dorsal>30</dorsal>
+						<posicion>Base</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Buddy</nombre>
+						<apellidos>Hield</apellidos>
+						<dorsal>7</dorsal>
+						<posicion>Escolta</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Gary</nombre>
+						<apellidos>Payton II</apellidos>
+						<dorsal>0</dorsal>
+						<posicion>Escolta</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Brandin</nombre>
+						<apellidos>Podziemski</apellidos>
+						<dorsal>2</dorsal>
+						<posicion>Base</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Kevon</nombre>
+						<apellidos>Looney</apellidos>
+						<dorsal>5</dorsal>
+						<posicion>Pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Dennis</nombre>
+						<apellidos>Schroder</apellidos>
+						<dorsal>71</dorsal>
+						<posicion>Base</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Kyle</nombre>
+						<apellidos>Anderson</apellidos>
+						<dorsal>1</dorsal>
+						<posicion>Alero</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Moses</nombre>
+						<apellidos>Moody</apellidos>
+						<dorsal>4</dorsal>
+						<posicion>Escolta</posicion>
+					</jugador>
+				</jugadores>
+			</equipo>
+			<equipo>
+				<nombre>Los Angeles Lakers</nombre>
+				<entrenador>JJ Redick</entrenador>
+				<estadio>Staples Center</estadio>
+				<puntos>16</puntos>
+				<partidosJugados>10</partidosJugados>
+				<partidosGanados>6</partidosGanados>
+				<partidosPerdidos>4</partidosPerdidos>
+				<puntosFavor>832</puntosFavor>
+				<puntosContra>832</puntosContra>
+				<diferenciaPuntos>0</diferenciaPuntos>
+				<jugadores>
+					<jugador>
+						<nombre>Rui</nombre>
+						<apellidos>Hachimura</apellidos>
+						<dorsal>28</dorsal>
+						<posicion>Ala-pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>LeBron</nombre>
+						<apellidos>James</apellidos>
+						<dorsal>23</dorsal>
+						<posicion>Alero</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Anthony</nombre>
+						<apellidos>Davis</apellidos>
+						<dorsal>3</dorsal>
+						<posicion>Pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Austin</nombre>
+						<apellidos>Reaves</apellidos>
+						<dorsal>15</dorsal>
+						<posicion>Escolta</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Quincy</nombre>
+						<apellidos>Olivari</apellidos>
+						<dorsal>41</dorsal>
+						<posicion>Escolta</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Max</nombre>
+						<apellidos>Christie</apellidos>
+						<dorsal>12</dorsal>
+						<posicion>Escolta</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Gabe</nombre>
+						<apellidos>Vincent</apellidos>
+						<dorsal>7</dorsal>
+						<posicion>Base</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Jaxson</nombre>
+						<apellidos>Hayes</apellidos>
+						<dorsal>11</dorsal>
+						<posicion>Pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Dalton</nombre>
+						<apellidos>Knecht</apellidos>
+						<dorsal>4</dorsal>
+						<posicion>Alero</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Bronny</nombre>
+						<apellidos>James</apellidos>
+						<dorsal>9</dorsal>
+						<posicion>Base</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Jalen</nombre>
+						<apellidos>Hood-Schifino</apellidos>
+						<dorsal>0</dorsal>
+						<posicion>Base</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Christian</nombre>
+						<apellidos>Wood</apellidos>
+						<dorsal>35</dorsal>
+						<posicion>Ala-pívot</posicion>
+					</jugador>
+				</jugadores>
+			</equipo>
+			<equipo>
+				<nombre>Real Madrid</nombre>
+				<entrenador>Chus Mateo</entrenador>
+				<estadio>WiZink Center</estadio>
+				<puntos>13</puntos>
+				<partidosJugados>10</partidosJugados>
+				<partidosGanados>3</partidosGanados>
+				<partidosPerdidos>7</partidosPerdidos>
+				<puntosFavor>836</puntosFavor>
+				<puntosContra>853</puntosContra>
+				<diferenciaPuntos>-17</diferenciaPuntos>
+				<jugadores>
+					<jugador>
+						<nombre>Facundo</nombre>
+						<apellidos>Campazzo</apellidos>
+						<dorsal>7</dorsal>
+						<posicion>Base</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Sergio</nombre>
+						<apellidos>Rodriguez</apellidos>
+						<dorsal>13</dorsal>
+						<posicion>Base</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Carlos</nombre>
+						<apellidos>Alocen</apellidos>
+						<dorsal>12</dorsal>
+						<posicion>Base</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Sergio</nombre>
+						<apellidos>Llul</apellidos>
+						<dorsal>23</dorsal>
+						<posicion>Base</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Rudy</nombre>
+						<apellidos>Fernandez</apellidos>
+						<dorsal>5</dorsal>
+						<posicion>Escolta</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Hugo</nombre>
+						<apellidos>Gonzalez</apellidos>
+						<dorsal>9</dorsal>
+						<posicion>Escolta</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Alberto</nombre>
+						<apellidos>Abalde</apellidos>
+						<dorsal>6</dorsal>
+						<posicion>Escolta</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Mario</nombre>
+						<apellidos>Hezonja</apellidos>
+						<dorsal>11</dorsal>
+						<posicion>Escolta</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Eli</nombre>
+						<apellidos>Ndiaye</apellidos>
+						<dorsal>30</dorsal>
+						<posicion>Ala-pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Vincent</nombre>
+						<apellidos>Poirier</apellidos>
+						<dorsal>17</dorsal>
+						<posicion>Pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Walter</nombre>
+						<apellidos>Tavares</apellidos>
+						<dorsal>22</dorsal>
+						<posicion>Pívot</posicion>
+					</jugador>
+					<jugador>
+						<nombre>Gabriel</nombre>
+						<apellidos>Deck</apellidos>
+						<dorsal>14</dorsal>
+						<posicion>Alero</posicion>
+					</jugador>
+				</jugadores>
+			</equipo>
+		</equipos>
+		<jornadas>
+			<jornada>
+				<numero>1</numero>
+				<partidos>
+					<partido>
+						<fecha>15/09/2023</fecha>
+						<hora>20:30</hora>
+						<equipo1>Atlanta Hawks</equipo1>
+						<equipo2>Real Madrid</equipo2>
+						<resultado>91-88</resultado>
+					</partido>
+					<partido>
+						<fecha>29/09/2023</fecha>
+						<hora>18:00</hora>
+						<equipo1>Boston Celtics</equipo1>
+						<equipo2>Los Angeles Lakers</equipo2>
+						<resultado>85-73</resultado>
+					</partido>
+					<partido>
+						<fecha>16/10/2023</fecha>
+						<hora>18:30</hora>
+						<equipo1>Chicago Bulls</equipo1>
+						<equipo2>Golden State Warriors</equipo2>
+						<resultado>80-84</resultado>
+					</partido>
+				</partidos>
+			</jornada>
+			<jornada>
+				<numero>2</numero>
+				<partidos>
+					<partido>
+						<fecha>31/10/2023</fecha>
+						<hora>20:00</hora>
+						<equipo1>Boston Celtics</equipo1>
+						<equipo2>Real Madrid</equipo2>
+						<resultado>83-88</resultado>
+					</partido>
+					<partido>
+						<fecha>20/11/2023</fecha>
+						<hora>17:00</hora>
+						<equipo1>Chicago Bulls</equipo1>
+						<equipo2>Atlanta Hawks</equipo2>
+						<resultado>88-87</resultado>
+					</partido>
+					<partido>
+						<fecha>08/12/2023</fecha>
+						<hora>18:30</hora>
+						<equipo1>Golden State Warriors</equipo1>
+						<equipo2>Los Angeles Lakers</equipo2>
+						<resultado>92-80</resultado>
+					</partido>
+				</partidos>
+			</jornada>
+			<jornada>
+				<numero>3</numero>
+				<partidos>
+					<partido>
+						<fecha>26/12/2023</fecha>
+						<hora>17:30</hora>
+						<equipo1>Chicago Bulls</equipo1>
+						<equipo2>Real Madrid</equipo2>
+						<resultado>91-80</resultado>
+					</partido>
+					<partido>
+						<fecha>09/01/2024</fecha>
+						<hora>18:00</hora>
+						<equipo1>Golden State Warriors</equipo1>
+						<equipo2>Boston Celtics</equipo2>
+						<resultado>81-76</resultado>
+					</partido>
+					<partido>
+						<fecha>29/01/2024</fecha>
+						<hora>17:00</hora>
+						<equipo1>Los Angeles Lakers</equipo1>
+						<equipo2>Atlanta Hawks</equipo2>
+						<resultado>93-79</resultado>
+					</partido>
+				</partidos>
+			</jornada>
+			<jornada>
+				<numero>4</numero>
+				<partidos>
+					<partido>
+						<fecha>15/02/2024</fecha>
+						<hora>19:00</hora>
+						<equipo1>Golden State Warriors</equipo1>
+						<equipo2>Real Madrid</equipo2>
+						<resultado>85-84</resultado>
+					</partido>
+					<partido>
+						<fecha>06/03/2024</fecha>
+						<hora>19:00</hora>
+						<equipo1>Los Angeles Lakers</equipo1>
+						<equipo2>Chicago Bulls</equipo2>
+						<resultado>80-70</resultado>
+					</partido>
+					<partido>
+						<fecha>25/03/2024</fecha>
+						<hora>20:30</hora>
+						<equipo1>Atlanta Hawks</equipo1>
+						<equipo2>Boston Celtics</equipo2>
+						<resultado>94-91</resultado>
+					</partido>
+				</partidos>
+			</jornada>
+			<jornada>
+				<numero>5</numero>
+				<partidos>
+					<partido>
+						<fecha>15/04/2024</fecha>
+						<hora>19:00</hora>
+						<equipo1>Los Angeles Lakers</equipo1>
+						<equipo2>Real Madrid</equipo2>
+						<resultado>92-87</resultado>
+					</partido>
+					<partido>
+						<fecha>06/05/2024</fecha>
+						<hora>18:30</hora>
+						<equipo1>Atlanta Hawks</equipo1>
+						<equipo2>Golden State Warriors</equipo2>
+						<resultado>80-75</resultado>
+					</partido>
+					<partido>
+						<fecha>21/05/2024</fecha>
+						<hora>18:00</hora>
+						<equipo1>Boston Celtics</equipo1>
+						<equipo2>Chicago Bulls</equipo2>
+						<resultado>87-83</resultado>
+					</partido>
+				</partidos>
+			</jornada>
+			<jornada>
+				<numero>6</numero>
+				<partidos>
+					<partido>
+						<fecha>10/06/2024</fecha>
+						<hora>18:00</hora>
+						<equipo1>Real Madrid</equipo1>
+						<equipo2>Atlanta Hawks</equipo2>
+						<resultado>91-85</resultado>
+					</partido>
+					<partido>
+						<fecha>30/06/2024</fecha>
+						<hora>17:00</hora>
+						<equipo1>Los Angeles Lakers</equipo1>
+						<equipo2>Boston Celtics</equipo2>
+						<resultado>100-74</resultado>
+					</partido>
+					<partido>
+						<fecha>30/06/2024</fecha>
+						<hora>20:00</hora>
+						<equipo1>Golden State Warriors</equipo1>
+						<equipo2>Chicago Bulls</equipo2>
+						<resultado>89-77</resultado>
+					</partido>
+				</partidos>
+			</jornada>
+			<jornada>
+				<numero>7</numero>
+				<partidos>
+					<partido>
+						<fecha>30/06/2024</fecha>
+						<hora>19:00</hora>
+						<equipo1>Real Madrid</equipo1>
+						<equipo2>Boston Celtics</equipo2>
+						<resultado>79-85</resultado>
+					</partido>
+					<partido>
+						<fecha>30/06/2024</fecha>
+						<hora>20:00</hora>
+						<equipo1>Atlanta Hawks</equipo1>
+						<equipo2>Chicago Bulls</equipo2>
+						<resultado>82-90</resultado>
+					</partido>
+					<partido>
+						<fecha>30/06/2024</fecha>
+						<hora>20:00</hora>
+						<equipo1>Los Angeles Lakers</equipo1>
+						<equipo2>Golden State Warriors</equipo2>
+						<resultado>88-79</resultado>
+					</partido>
+				</partidos>
+			</jornada>
+			<jornada>
+				<numero>8</numero>
+				<partidos>
+					<partido>
+						<fecha>30/06/2024</fecha>
+						<hora>18:00</hora>
+						<equipo1>Real Madrid</equipo1>
+						<equipo2>Chicago Bulls</equipo2>
+						<resultado>83-81</resultado>
+					</partido>
+					<partido>
+						<fecha>30/06/2024</fecha>
+						<hora>17:30</hora>
+						<equipo1>Boston Celtics</equipo1>
+						<equipo2>Golden State Warriors</equipo2>
+						<resultado>98-88</resultado>
+					</partido>
+					<partido>
+						<fecha>30/06/2024</fecha>
+						<hora>17:30</hora>
+						<equipo1>Atlanta Hawks</equipo1>
+						<equipo2>Los Angeles Lakers</equipo2>
+						<resultado>95-70</resultado>
+					</partido>
+				</partidos>
+			</jornada>
+			<jornada>
+				<numero>9</numero>
+				<partidos>
+					<partido>
+						<fecha>30/06/2024</fecha>
+						<hora>19:30</hora>
+						<equipo1>Real Madrid</equipo1>
+						<equipo2>Golden State Warriors</equipo2>
+						<resultado>76-78</resultado>
+					</partido>
+					<partido>
+						<fecha>30/06/2024</fecha>
+						<hora>18:00</hora>
+						<equipo1>Chicago Bulls</equipo1>
+						<equipo2>Los Angeles Lakers</equipo2>
+						<resultado>91-74</resultado>
+					</partido>
+					<partido>
+						<fecha>30/06/2024</fecha>
+						<hora>20:30</hora>
+						<equipo1>Boston Celtics</equipo1>
+						<equipo2>Atlanta Hawks</equipo2>
+						<resultado>90-85</resultado>
+					</partido>
+				</partidos>
+			</jornada>
+			<jornada>
+				<numero>10</numero>
+				<partidos>
+					<partido>
+						<fecha>30/06/2024</fecha>
+						<hora>19:00</hora>
+						<equipo1>Real Madrid</equipo1>
+						<equipo2>Los Angeles Lakers</equipo2>
+						<resultado>80-82</resultado>
+					</partido>
+					<partido>
+						<fecha>30/06/2024</fecha>
+						<hora>18:00</hora>
+						<equipo1>Golden State Warriors</equipo1>
+						<equipo2>Atlanta Hawks</equipo2>
+						<resultado>85-76</resultado>
+					</partido>
+					<partido>
+						<fecha>30/06/2024</fecha>
+						<hora>19:00</hora>
+						<equipo1>Chicago Bulls</equipo1>
+						<equipo2>Boston Celtics</equipo2>
+						<resultado>92-78</resultado>
 					</partido>
 				</partidos>
 			</jornada>
@@ -1577,12 +2361,12 @@
 	</temporada>
 	<temporada>
 		<nombre>2025-2026</nombre>
-		<estado>En proceso</estado>
+		<estado>En creación</estado>
 		<equipos>
 			<equipo>
-				<nombre>TEST</nombre>
-				<entrenador>TEST</entrenador>
-				<estadio>TEST</estadio>
+				<nombre>EQUIPO 1</nombre>
+				<entrenador>E1</entrenador>
+				<estadio>E1</estadio>
 				<puntos>0</puntos>
 				<partidosJugados>0</partidosJugados>
 				<partidosGanados>0</partidosGanados>
@@ -1594,23 +2378,9 @@
 				</jugadores>
 			</equipo>
 			<equipo>
-				<nombre>TEST2</nombre>
-				<entrenador>TEST2</entrenador>
-				<estadio>TEST2</estadio>
-				<puntos>0</puntos>
-				<partidosJugados>0</partidosJugados>
-				<partidosGanados>0</partidosGanados>
-				<partidosPerdidos>0</partidosPerdidos>
-				<puntosFavor>0</puntosFavor>
-				<puntosContra>0</puntosContra>
-				<diferenciaPuntos>0</diferenciaPuntos>
-				<jugadores>
-				</jugadores>
-			</equipo>
-			<equipo>
-				<nombre>TEST3</nombre>
-				<entrenador>TEST3</entrenador>
-				<estadio>TEST3</estadio>
+				<nombre>EQUIPO 2</nombre>
+				<entrenador>E1</entrenador>
+				<estadio>1</estadio>
 				<puntos>0</puntos>
 				<partidosJugados>0</partidosJugados>
 				<partidosGanados>0</partidosGanados>
